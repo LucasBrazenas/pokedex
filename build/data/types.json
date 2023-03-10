@@ -1,0 +1,110 @@
+{
+	"all_types": [	{
+		"name": "fire",
+		"stronger": ["steel", "bug", "ice", "grass"],
+		"half": ["water", "dragon", "fire", "rock"],
+		"no_damage": []
+	}, 
+	{
+		"name": "ice",
+		"stronger": ["dragon", "grass", "ground", "flying"],
+		"half": ["steel", "water", "fire", "ice"],
+		"no_damage": []
+    },
+	{
+		"name": "psychic",
+		"stronger": ["fight", "poison"],
+		"half": ["steel", "psychic"],
+		"no_damage": ["dark"]
+    },
+	{
+		"name": "flying",
+		"stronger": ["bug", "fight", "grass"],
+		"half": ["steel", "electric", "rock"],
+		"no_damage": []
+	},
+	{
+		"name": "steel",
+		"stronger": ["fairy", "ice", "rock"],
+		"half": ["steel", "water", "electric", "fire"],
+		"no_damage": []
+	},
+	{
+		"name": "bug",
+		"stronger": ["grass", "psychic", "dark"],
+		"half": ["steel", "ghost", "fire", "fairy", "fight", "poison", "flying"],
+		"no_damage": []
+	},
+	{
+		"name": "dragon",
+		"stronger": ["dragon"],
+		"half": ["steel"],
+		"no_damage": ["fairy"]
+	},
+	{
+		"name": "ghost",
+		"stronger": ["ghost", "psychic"],
+		"half": ["dark"],
+		"no_damage": ["normal"]
+	},
+	{
+		"name": "normal",
+		"stronger": [],
+		"half": ["steel", "rock"],
+		"no_damage": ["ghost"]
+	},
+	{
+		"name": "rock",
+		"stronger": ["bug", "fire", "ice", "flying"],
+		"half": ["steel", "fight", "ground"],
+		"no_damage": []
+	},
+	{
+		"name": "dark",
+		"stronger": ["ghost", "psychic"],
+		"half": ["fairy", "fight", "dark"],
+		"no_damage": []
+	},
+	{
+		"name": "ground",
+		"stronger": ["steel", "electric", "rock", "poison", "fire"],
+		"half": ["bug", "grass"],
+		"no_damage": ["flying"]
+	},
+	{
+		"name": "poison",
+		"stronger": ["grass", "fairy"],
+		"half": ["ghost", "rock", "ground", "poison"],
+		"no_damage": ["steel"]
+	},
+	{
+		"name": "water",
+		"stronger": ["fire", "rock", "ground"],
+		"half": ["water", "dragon", "grass"],
+		"no_damage": []
+	},
+	{
+		"name": "electric",
+		"stronger": ["water", "flying"],
+		"half": ["dragon", "electric", "grass"],
+		"no_damage": ["ground"]
+	},
+	{
+		"name": "fairy",
+		"stronger": ["dragon", "fight", "dark"],
+		"half": ["steel", "fire", "poison"],
+		"no_damage": []
+	},
+	{
+		"name": "fight",
+		"stronger": ["steel", "ice", "normal", "rock", "dark"],
+		"half": ["bug", "fairy", "psychic", "poison", "flying"],
+		"no_damage": ["ghost"]
+	},
+	{
+		"name": "grass",
+		"stronger": ["water", "rock", "ground"],
+		"half": ["steel", "bug", "dragon", "fire", "grass", "poison", "flying"],
+		"no_damage": []
+	}]
+}

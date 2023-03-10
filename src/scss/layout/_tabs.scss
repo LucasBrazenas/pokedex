@@ -1,0 +1,295 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tabs {
+
+    .tabslinks {
+        display: flex;
+        justify-content: center;
+
+        .tablink {
+            color: v.$gray;
+            background-color: v.$white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            height: 4rem;
+            font-size: 1.8rem;
+
+            &:hover {
+                color: v.$light_gray;
+                transition: .5s all ease;
+            }
+        }
+
+        .active {
+            color: v.$light_gray; 
+            border-bottom: 1px solid v.$gray;
+        }
+    }
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tab-active {
+    display: block;
+}
+
+#poke-about {
+
+    .description p {
+        margin: 2rem;
+        color: v.$gray;
+        font-size: 1.8rem;
+    }
+}
+
+#poke-battle {
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+            
+    .stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .stat {     
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            p {
+                margin: .5rem 0;
+                text-align: center;
+                width: 8rem;
+                color: v.$gray;
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+
+            .bar {
+                background-color: v.$gray;
+                border-radius: 1.5rem;
+                opacity: .6;
+                width: 75%;
+                height: 2rem;
+
+                .progress {
+                    border-radius: 1.5rem;
+                    height: 2rem;
+
+                    p {
+                        margin: 0;
+                        color: v.$white;
+                        text-align: center;
+                        width: 100%;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+
+.section {
+    .section-title {
+        color: v.$gray;
+        font-weight: 700;
+        font-size: 2.2rem;
+    }
+
+    .section-detail {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        padding: 0 3rem;
+    
+        p {
+            margin: .5rem;
+            color: v.$gray;
+            text-align: center;
+        }
+    
+        .value {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    
+        .title {
+            font-size: 1.8rem;
+        }
+    
+        .types {
+            display: flex;
+            gap: .5rem;
+            
+            .type {
+                display: flex; 
+                flex-direction: column;
+                align-items: center;
+    
+                .title {
+                    font-size: 1.6rem;
+                    margin: 0 0 .3rem 0;
+                    color: v.$gray;
+                    text-align: center;
+                }
+    
+                .img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+    
+            #type1-img {
+                background-image: url("../img/grass-type.png"); 
+            }
+        }
+    }
+}
+
+/*
+.poke-stats {
+
+            margin-top: 1rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #42424250;
+            
+            .title {
+                text-align: center;
+                color: v.$gray;
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+
+            .stats {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .stat {
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+
+                    p {
+                        margin: .5rem .5rem .5rem 0;
+                        text-align: center;
+                        width: 8rem;
+                        color: v.$gray;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                    }
+
+                    .bar {
+                        background-color: v.$gray;
+                        border-radius: 1.5rem;
+                        opacity: .6;
+                        width: 70%;
+                        height: 2rem;
+
+                        .progress {
+                            border-radius: 1.5rem;
+                            height: 2rem;
+
+                            p {
+                                margin: 0;
+                                color: v.$white;
+                                text-align: center;
+                                width: 100%;
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .poke-gender {   
+            
+            margin-bottom: 1rem;
+            
+            .title {
+                text-align: center;
+                color: v.$gray;
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin: 1.5rem 0;
+            }
+
+            .genders {
+                display: flex;
+                justify-content: center;
+                gap: 5rem;
+            
+                i {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 5rem;
+                    height: 5rem;
+                    border: 1.5px solid v.$black;
+                    border-radius: 100px;
+                }
+
+                .fa-mars {
+                    color: #2482e0;
+                }
+
+                .fa-venus {
+                    color: #ac4f85;
+                }
+            }
+        }
+    }
+}
+*/
+
+// Bar Colors
+
+.hp {
+    background-color: #f54238;
+    width: 17.6%;
+}
+
+.atk {
+    background-color: #eba523;
+    width: 19.2%;
+}
+
+.def {
+    background-color: #2482e0;
+    width: 19.2%;
+}
+
+.sp-atk {
+    background-color: #926390;
+    width:  25.4%;
+}
+
+.sp-def {
+    background-color: #6ebd6e;
+    width: 25.4%;
+}
+
+.spd {
+    background-color: #80a2ad;
+    width: 17.6%;
+}
+
+.tls {
+    background-color: #0e1d72;
+    width: 24.9%;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokedex - V3.0.0</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="build/css/app.css">
+    </head>
+    <body>
+        <div class="bg-gradient">
+            <!--Start Header-->
+            <header>
+                <nav class="nav-bar container">
+                    <div class="brand">
+                        <a href="index.html">
+                            <h1><span>Poke</span>dex</h1>
+                        </a>
+                    </div>
+                    <form id="search" class="search">
+                        <div class="search-bar">
+                            <input type="text" name="pokemon" placeholder="Pokemon / ID">
+                            <button type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                        <div class="not-found"><p>Pokemon not found!</p></div>
+                    </form>
+                </nav>
+            </header>
+            <!--End Header-->
+            <!--Start Pokecard-->
+            <div class="pokemon-card container">
+                <div id="poke-img" class="card-img"></div> <!--Card img-->
+                <!--Start cardinfo-->
+                <div class="card-info">
+                    <p id="poke-name" class="poke-name">Bulbasaur #001</p>
+
+                    <!--Start poketypes-->
+                    <div class="poke-types">
+                            <div id="poke-type1" class="type">
+                                <div class="img"></div>
+                                <p class="title">Grass</p>
+                            </div>
+                            <div id="poke-type2" class="type" style="border-left: 1px solid #42424250; padding-left: 2rem;">
+                                <div class="img"></div>
+                                <p class="title">Poison</p>
+                            </div>
+                    </div>
+                    <!--End poketypes-->
+                    <!--Start Tabs-->
+                    <div class="tabs container">
+                        <div class="tabslinks">
+                            <button id="about" class="tablink active">About</button>
+                            <button id="battle" class="tablink">Battle info</button>
+                            <button id="evolution" class="tablink">Evolution</button>
+                        </div>
+                        <!--Start Pokeabout-->
+                        <div id="poke-about" class="tabcontent tab-active">
+                            <div class="description"><p id="desc">A stange seed was planted on it´s back at birth. The plant sprouts and grows whith this Pokemon.</p></div>
+                            <div class="section">
+                                <p class="section-title">Pokedex Data</p>
+                                <div class="section-detail">
+                                    <p class="title">Weight</p>
+                                    <p id="weight" class="value">6.9 KG</p>
+                                </div>
+                                <div class="section-detail">
+                                    <p class="title">Height</p>
+                                    <p id="height" class="value">0.7 M</p>
+                                </div>
+                                <div class="section-detail">
+                                    <p class="title">Abilities</p>
+                                    <p id="abl" class="value">45</p>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <p class="section-title">Training</p>
+                                <div class="section-detail">
+                                    <p class="title">Capture rate</p>
+                                    <p id="cprate" class="value">45</p>
+                                </div>
+                                <div class="section-detail">
+                                    <p class="title">Base Happiness</p>
+                                    <p id="bhappy" class="value">50</p>
+                                </div>
+                                <div class="section-detail">
+                                    <p class="title">Base Experience</p>
+                                    <p id="bexp" class="value">64</p>
+                                </div>
+                                <div class="section-detail">
+                                    <p class="title">Growth rate</p>
+                                    <p id="gwrate" class="value">medium-slow</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Pokeabout-->
+                        <!--Start Pokeabattle-->
+                        <div id="poke-battle" class="tabcontent">
+                            <div class="section">
+                                <p class="section-title">Base stats</p>
+                                <div class="stats">
+                                    <div class="stat">
+                                        <p>HP</p>
+                                        <div class="bar">
+                                            <div class="progress hp"><p>45/255</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <p>ATK</p>
+                                        <div class="bar">
+                                            <div class="progress atk"><p>49/255</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <p>DEF</p>
+                                        <div class="bar">
+                                            <div class="progress def"><p>49/255</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <p>SP-ATK</p>
+                                        <div class="bar">
+                                            <div class="progress sp-atk"><p>65/255</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <p>SP-DEF</p>
+                                        <div class="bar">
+                                            <div class="progress sp-def"><p>65/255</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <p>SPD</p>
+                                        <div class="bar">
+                                            <div class="progress spd"><p>45/255</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <p>TOTAL</p>
+                                        <div class="bar">
+                                            <div class="progress tls"><p>318/1275</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <p class="section-title">Battle Data</p>
+                                <div class="section-detail">
+                                    <p class="title">Weaknesses</p>
+                                    <div id="wktypes" class="types">
+                                        <div class="type">
+                                            <div id="type1-img" class="img"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-detail">
+                                    <p class="title">Strengths</p>
+                                    <div id="strtypes" class="types">
+                                        <div class="type">
+                                            <div id="type1-img" class="img"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Pokeabattle-->
+                    </div>
+                    <!--End Tabs-->
+                </div>
+                <!--End cardinfo-->
+            </div>
+            <!--End Pokecard-->
+        </div>
+        <script type="module" src="build/js/app.js"></script>
+        <script src="https://kit.fontawesome.com/fdb5986e0b.js" crossorigin="anonymous"></script>
+    </body>
+</html>

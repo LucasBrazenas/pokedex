@@ -1,0 +1,85 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.pokemon-card {
+
+    width: 95vw;
+    height: auto;
+
+    @include m.tablet {
+        width: 75vw;
+    }
+
+    @include m.desktopXL {
+        width: 35vw;
+        height: 73%;
+    }
+
+    background-color: v.$white;
+    border-radius: 1.5rem 1.5rem 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card-img {
+        min-width: 20rem;
+        min-height: 20rem;
+        margin-top: calc(-120px - 5px);
+        background-image: url("../img/pokemon.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .card-info {
+
+        width: 100%;
+
+        .poke-name {
+            font-size: 3rem;
+            margin: 0;
+            color: v.$gray;
+            text-align: center;
+        }
+
+        .poke-types {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #42424250;
+
+            .type {
+                display: flex; 
+                flex-direction: column;
+                align-items: center;
+
+                .title {
+                    font-size: 1.6rem;
+                    margin: 0 0 .3rem 0;
+                    color: v.$gray;
+                    text-align: center;
+                }
+
+                .img {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            #poke-type1 {
+                .img { background-image: url("../img/grass-type.png"); }
+            }
+
+            #poke-type2 {
+                .img { background-image: url("../img/poison-type.png"); }
+            }
+        }
+    }
+}
